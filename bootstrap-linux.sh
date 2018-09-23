@@ -1,4 +1,4 @@
-sudo dnf install util-linux-user fish git
+sudo dnf install util-linux-user fish git go
 sudo chsh -s /bin/fish blomma
 
 # Set standard settings
