@@ -10,4 +10,3 @@ brew install $(cat Brewfile|grep -v "#")
 source 'symlink-dotfiles.sh'
 
 curl -L https://get.oh-my.fish | fish
-omf install

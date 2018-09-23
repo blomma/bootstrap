@@ -5,4 +5,3 @@ sudo chsh -s /bin/fish blomma
 source 'symlink-dotfiles.sh'
 
 curl -L https://get.oh-my.fish | fish
-omf install
