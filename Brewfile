@@ -1,0 +1,17 @@
+fish
+git
+go
+midnight-commander
+msmtp
+neofetch
+ncdu
+neomutt
+notmuch
+offlineimap
+rbenv
+swiftformat
+tig
+tmux
+vim
+urlview
+wget
