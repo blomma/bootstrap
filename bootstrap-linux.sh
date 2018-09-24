@@ -1,6 +1,6 @@
 U=$(whoami)
 
-sudo dnf -y install util-linux-user fish git go
+sudo dnf -y install util-linux-user fish git go sudo which
 sudo chsh -s /bin/fish $U
 
 # Set standard settings
