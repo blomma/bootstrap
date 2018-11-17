@@ -2,10 +2,10 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Update Homebrew
-brew update
+/usr/local/bin/brew update
 
 # Install brews
-brew install \
+/usr/local/bin/brew install \
     fish \
     git \
     go \
