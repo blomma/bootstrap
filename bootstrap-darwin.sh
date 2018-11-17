@@ -5,8 +5,44 @@
 brew update
 
 # Install brews
-brew install $(cat Brewfile|grep -v "#")
+brew install \
+    fish \
+    git \
+    go \
+    midnight-commander \
+    msmtp \
+    neofetch \
+    ncdu \
+    neomutt \
+    notmuch \
+    offlineimap \
+    rbenv \
+    swiftformat \
+    tig \
+    tmux \
+    vim \
+    urlview \
+    wget \
+    lbdb \
 
-source 'symlink-dotfiles.sh'
+# Symlink everything we need
+go get -u github.com/blomma/viaduct
+
+git clone --recursive https://github.com/blomma/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+
+~/go/bin/viaduct fish
+~/go/bin/viaduct git
+~/go/bin/viaduct mc
+~/go/bin/viaduct neomutt
+~/go/bin/viaduct nvim
+~/go/bin/viaduct omf
+~/go/bin/viaduct ssh
+~/go/bin/viaduct tmux
+~/go/bin/viaduct vim
+~/go/bin/viaduct xcode
+
+# Fonts are special, we copy those
+cp fonts/* ~/Library/Fonts/
 
 curl -L https://get.oh-my.fish | fish
