@@ -1,6 +1,6 @@
 U=$(whoami)
 
-sudo dnf -y install util-linux-user fish git go sudo which
+sudo dnf -y install util-linux-user fish git sudo which
 sudo chsh -s /bin/fish $U
 
 # Install linuxbrew
