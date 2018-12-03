@@ -4,6 +4,7 @@ sudo apt -y install fish
 sudo chsh -s /usr/bin/fish $U
 
 # Install linuxbrew
+sudo apt -y install build-essential curl file git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
 # Update Homebrew
