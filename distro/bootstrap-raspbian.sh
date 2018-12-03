@@ -1,7 +1,7 @@
 U=$(whoami)
 
 sudo apt -y install fish
-sudo chsh -s /bin/fish $U
+sudo chsh -s /usr/bin/fish $U
 
 # Install linuxbrew
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
