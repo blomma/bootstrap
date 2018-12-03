@@ -1,11 +1,11 @@
 U=$(whoami)
 
-sudo apt -y install fish
-sudo chsh -s /usr/bin/fish $U
-
 # Install linuxbrew
 sudo apt -y install build-essential curl file git
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+git clone https://github.com/Linuxbrew/brew ~/.linuxbrew/Homebrew
+mkdir ~/.linuxbrew/bin
+ln -s ../Homebrew/bin/brew ~/.linuxbrew/bin
+eval $(~/.linuxbrew/bin/brew shellenv)
 
 # Update Homebrew
 brew update
@@ -33,5 +33,8 @@ cd ~/.dotfiles
 ~/go/bin/viaduct ssh
 ~/go/bin/viaduct tmux
 ~/go/bin/viaduct vim
+
+sudo apt -y install fish
+sudo chsh -s /usr/bin/fish $U
 
 curl -L https://get.oh-my.fish | fish
