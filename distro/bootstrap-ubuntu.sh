@@ -1,7 +1,7 @@
 U=$(whoami)
 
 sudo apt update
-sudo apt install -y fish git sudo
+sudo apt install -y fish git sudo curl
 sudo chsh -s /usr/bin/fish $U
 
 # Install linuxbrew
