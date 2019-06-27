@@ -17,8 +17,6 @@ brew update
 brew install \
     git \
     go \
-    midnight-commander \
-    neofetch \
     ncdu \
     tig \
     tmux \
@@ -34,12 +32,9 @@ cd ~/.dotfiles
 ~/go/bin/viaduct fish
 ~/go/bin/viaduct mc
 ~/go/bin/viaduct nvim
-~/go/bin/viaduct omf
 ~/go/bin/viaduct ssh
 ~/go/bin/viaduct tmux
 ~/go/bin/viaduct vim
 
 # Fonts are special, we copy those
 #cp fonts/* ~/Library/Fonts/
-
-curl -L https://get.oh-my.fish | fish
