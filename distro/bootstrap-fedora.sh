@@ -53,7 +53,8 @@ cd ~/.dotfiles
 ~/go/bin/viaduct rofi
 
 # Fonts are special, we copy those
-cp fonts/* ~/.fonts/
+mkdir ~/.fonts/
+cp -r fonts/* ~/.fonts/
 
 # Change chell to the one and only fish
 sudo chsh -s /bin/fish $U
