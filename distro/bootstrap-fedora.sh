@@ -12,7 +12,9 @@ sudo dnf -y install \
     tmux \
     vim \
     urlview \
-    wget
+    wget \
+    golang \
+    libxcrypt-compat # compat layer for homebrew
 
 # Install linuxbrew
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
@@ -25,7 +27,6 @@ brew update
 
 # Install brews
 brew install \
-    go \
     tig
 
 # Install HEAD brews
