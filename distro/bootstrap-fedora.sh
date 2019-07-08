@@ -1,7 +1,18 @@
 U=$(whoami)
 
-sudo dnf -y install util-linux-user fish git sudo which
-sudo chsh -s /bin/fish $U
+sudo dnf -y install \
+    util-linux-user \
+    fish \
+    git \
+    sudo \
+    which \
+    msmtp \
+    offlineimap \
+    notmuch \
+    tmux \
+    vim \
+    urlview \
+    wget
 
 # Install linuxbrew
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
@@ -14,23 +25,13 @@ brew update
 
 # Install brews
 brew install \
-    git \
     go \
-    midnight-commander \
-    msmtp \
-    neofetch \
-    ncdu \
-    neomutt \
-    notmuch \
-    offlineimap \
-    rbenv \
-    swiftformat \
-    tig \
-    tmux \
-    vim \
-    urlview \
-    wget \
-    lbdb \
+    tig
+
+# Install HEAD brews
+brew install \
+    diff-so-fancy \
+    --HEAD
 
 # Symlink everything we need
 go get -u github.com/blomma/viaduct
@@ -39,15 +40,19 @@ git clone --recursive https://github.com/blomma/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
 ~/go/bin/viaduct fish
+~/go/bin/viaduct git
 ~/go/bin/viaduct mc
 ~/go/bin/viaduct neomutt
 ~/go/bin/viaduct nvim
-~/go/bin/viaduct omf
 ~/go/bin/viaduct ssh
 ~/go/bin/viaduct tmux
 ~/go/bin/viaduct vim
+~/go/bin/viaduct waybar
+~/go/bin/viaduct sway
+~/go/bin/viaduct rofi
 
 # Fonts are special, we copy those
-#cp fonts/* ~/Library/Fonts/
+cp fonts/* ~/.fonts/
 
-curl -L https://get.oh-my.fish | fish
+# Change chell to the one and only fish
+sudo chsh -s /bin/fish $U
