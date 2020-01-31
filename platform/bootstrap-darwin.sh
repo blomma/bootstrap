@@ -9,15 +9,14 @@
     fish \
     git \
     go \
-    midnight-commander \
     msmtp \
-    neofetch \
-    ncdu \
+    # neofetch \
+    # ncdu \
     neomutt \
     notmuch \
     offlineimap \
-    rbenv \
-    swiftformat \
+    # rbenv \
+    # swiftformat \
     tig \
     tmux \
     vim \
@@ -33,10 +32,10 @@ cd ~/.dotfiles
 
 ~/go/bin/viaduct fish
 ~/go/bin/viaduct git
-~/go/bin/viaduct mc
 ~/go/bin/viaduct neomutt
+~/go/bin/viaduct offlineimap
+~/go/bin/viaduct msmtp
 ~/go/bin/viaduct nvim
-~/go/bin/viaduct omf
 ~/go/bin/viaduct ssh
 ~/go/bin/viaduct tmux
 ~/go/bin/viaduct vim
@@ -44,5 +43,3 @@ cd ~/.dotfiles
 
 # Fonts are special, we copy those
 cp fonts/* ~/Library/Fonts/
-
-curl -L https://get.oh-my.fish | fish
