@@ -15,4 +15,8 @@ cd ~/.dotfiles
 ~/go/bin/viaduct vim
 ~/go/bin/viaduct git
 
+# Fonts are special, we copy those
+mkdir ~/.fonts/
+cp -r fonts/* ~/.fonts/
+
 sudo chsh -s /usr/bin/fish $U
