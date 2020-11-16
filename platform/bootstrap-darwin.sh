@@ -16,13 +16,13 @@
     notmuch \
     offlineimap \
     # rbenv \
-    # swiftformat \
+    swiftformat \
     tig \
     tmux \
     vim \
     urlview \
     wget \
-    lbdb \
+    # lbdb \
 
 # Symlink everything we need
 go get -u github.com/blomma/viaduct
@@ -43,3 +43,8 @@ cd ~/.dotfiles
 
 # Fonts are special, we copy those
 cp fonts/* ~/Library/Fonts/
+
+# And run settings
+
+# Disable font smoothing on macos 12
+# defaults -currentHost write -g AppleFontSmoothing -int 0
